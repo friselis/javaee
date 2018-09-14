@@ -18,9 +18,11 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        InputStream resource = getServletContext().getResourceAsStream("/WEB-INF/main.html");
-        IOUtils.copy(resource, resp.getOutputStream());
+//        InputStream resource = getServletContext().getResourceAsStream("/WEB-INF/jsp/mainpage.jsp");
+//        IOUtils.copy(resource, resp.getOutputStream());
+        req.getRequestDispatcher("WEB-INF/jsp/mainpage.jsp").forward(req, resp);
     }
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

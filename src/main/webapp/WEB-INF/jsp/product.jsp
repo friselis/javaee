@@ -1,0 +1,10 @@
+<html>
+    <head>
+        <title>
+            Product
+        </title>
+     </head>
+<body>
+<p>Product</p>
+</body>
+</html>

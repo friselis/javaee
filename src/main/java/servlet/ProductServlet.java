@@ -14,8 +14,10 @@ import java.io.InputStream;
 public class ProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        InputStream resource = getServletContext().getResourceAsStream("/WEB-INF/product.html");
-        IOUtils.copy(resource, resp.getOutputStream());    }
+//        InputStream resource = getServletContext().getResourceAsStream("/WEB-INF/product.html");
+//        IOUtils.copy(resource, resp.getOutputStream());
+        req.getRequestDispatcher("WEB-INF/jsp/product.jsp").forward(req, resp);
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -15,8 +15,9 @@ public class OrderServlet extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        InputStream resource = getServletContext().getResourceAsStream("/WEB-INF/order.html");
-        IOUtils.copy(resource, resp.getOutputStream());
+//        InputStream resource = getServletContext().getResourceAsStream("/WEB-INF/order.html");
+//        IOUtils.copy(resource, resp.getOutputStream());
+        req.getRequestDispatcher("WEB-INF/jsp/order.jsp").forward(req, resp);
 
     }
 
