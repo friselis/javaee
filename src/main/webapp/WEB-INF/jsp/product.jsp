@@ -1,10 +1,7 @@
 <html>
-    <head>
-        <title>
-            Product
-        </title>
-     </head>
+<jsp:include page="head.jsp" />
 <body>
-<p>Product</p>
+<jsp:include page="navbar.jsp" />
+<jsp:include page="footer.jsp" />
 </body>
 </html>

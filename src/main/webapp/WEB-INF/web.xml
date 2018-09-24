@@ -15,4 +15,9 @@
     <location>/WEB-INF/error403.html</location>
   </error-page>
 
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.css</url-pattern>
+  </servlet-mapping>
+
 </web-app>

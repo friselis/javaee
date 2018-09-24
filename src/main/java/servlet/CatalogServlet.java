@@ -13,9 +13,10 @@ import java.io.InputStream;
 @WebServlet(name = "Catalog", urlPatterns = {"/catalog"})
 public class CatalogServlet extends HttpServlet{
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        InputStream resource = getServletContext().getResourceAsStream("/WEB-INF/catalog.html");
-        IOUtils.copy(resource, resp.getOutputStream());    }
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        req.getRequestDispatcher("WEB-INF/jsp/catalog.jsp").forward(req, resp);
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

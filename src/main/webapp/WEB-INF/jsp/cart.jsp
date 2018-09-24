@@ -1,10 +1,8 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Cart
-        </title>
-     </head>
+<jsp:include page="head.jsp" />
 <body>
-<p>Cart</p>
+<jsp:include page="navbar.jsp" />
+<jsp:include page="footer.jsp" />
 </body>
 </html>
